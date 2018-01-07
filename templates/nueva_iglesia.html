@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<div class="row">
+	{% from "_macro.html" import render_field %}
+	<br>
+	<h5>Nueva Iglesia</h5>
+	<form method="POST" class="col s12">
+		<div class="row">
+			{{ render_field(form.nombre_iglesia) }}
+		</div>
+		<button class="btn waves-effect waves-light" type="submit" name="action">Registrar
+			<i class="material-icons right">send</i>
+		</button>
+	</form>
+</div>
+{% endblock %}
